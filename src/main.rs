@@ -24,15 +24,15 @@ fn main() {
         println!("** List contacts - 1");
         println!("** Add contact - 2");
         println!("** Type any other number for exit");
-        println!("Type your choise");
+        println!("Type your choice");
 
-        let choise = take_user_input();
+        let choice = take_user_input();
 
-        let choise: u32 = match choise.trim().parse() {
+        let choice: u32 = match choice.trim().parse() {
             Ok(num) => num,
             Err(_) => continue,
         };
-        match choise {
+        match choice {
             1 => {
                 println!("Listing all contacts...");
                 print_contacts(&list);
